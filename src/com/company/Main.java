@@ -13,6 +13,7 @@ public class Main {
         String randomWord = getRandomWord();
         System.out.println(randomWord); //TODO REMOVE THIS
 
+        boolean foundLocationMatch = false;
         char[] charArray = new char[randomWord.length()];
         for(int j = 0; j < charArray.length; j++) charArray[j] = '_';
         for(int i = 1; i <= 5; i++){
@@ -33,10 +34,9 @@ public class Main {
                             if(randomWord.charAt(j) == inputWord.charAt(k)){
                                 if(j == k){
                                     charArray[j] = randomWord.charAt(j);
-                                    System.out.println("letter and location match: " + randomWord.charAt(j));
                                 }
                                 else{
-                                    System.out.println("letter match: " + randomWord.charAt(j));
+                                    System.out.println("found letter: " + randomWord.charAt(j));
                                 }
                             }
                         }
